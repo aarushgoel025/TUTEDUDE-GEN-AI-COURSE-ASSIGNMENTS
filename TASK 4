@@ -1,0 +1,26 @@
+products=["S25 Ultra", "Boat Headphones", "IPhone 17", "LG Smart TV", "HP Pavilion", "Logitech S500 mouse"]
+price_dict={"S25 Ultra":120000,"Boat Headphones": 1800, "IPhone 17": 80000, "LG Smart TV": 25000,"HP Pavilion": 50000,"Logitech S500 mouse": 800 }
+categories= ["Mobile phone","Audio device", "Mobile phone", "Electronics", "Laptop", "Computer accessories"]
+catalog=[]
+for i in range(len(products)):
+    catalog.append((products[i],price_dict.get(products[i]),categories[i]))
+print(catalog)
+#2. 
+category_to_products={}
+for item in catalog:
+    product=item[0]
+    category=item[2]
+    if categories[i] not in category_to_products:
+        category_to_products[category]=[]
+category_to_products[category].append(products[i])
+print(category_to_products)
+#3.
+max_category=None
+max_count=0
+for category in category_to_products:
+    if len(category_to_products[category])>max_count:
+        max_count=len(category_to_products[category])
+        max_category=category
+print("Category with most products is:", max_category, "with", max_count, "products.")
+        
+

@@ -1,0 +1,17 @@
+#TASK 2
+products=["S25 Ultra", "Boat Headphones", "IPhone 17", "LG Smart TV", "HP Pavilion", "Logitech S500 mouse"]
+#1. creating a new parallel categoriesset
+categories= ["Mobile phone","Audio device", "Mobile phone", "Electronics", "Laptop", "Computer accessories"]
+categories_set= set(categories)
+print("Original categories set:", categories_set)
+#2. adding new category
+categories_set.add("Gaming")
+print("Updated categories set:", categories_set)
+#adding a category again to show that items in a set don't repeat and are ignored
+categories_set.add("Laptop")
+print("After adding deuplicate category, categories set:", categories_set)
+#3. checking if a category exists in the set
+print("If 'Electronics' exist:", "Electronics" in categories_set)
+print("If 'Lights' exist:", "Lights" in categories_set)
+#optional: counting unique catergories
+print("No. of uniques categories",len(categories_set))

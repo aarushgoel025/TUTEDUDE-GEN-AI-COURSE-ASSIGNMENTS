@@ -1,0 +1,14 @@
+#TASK 1
+products=["S25 Ultra", "Boat Headphones", "IPhone 17", "LG Smart TV", "HP Pavilion", "Logitech S500 mouse"]
+sample_tuple= ("S25 Ultra", 120000, "Smartphone")
+print ("Secod element:",products[1],"\nLast product:", products[-1])
+extra_products=["Dyson Air Wrap", "Samsung Fridge"]
+products.append(extra_products)
+print("Updated list:", products)
+#OPTIONAL
+list1=list(sample_tuple)
+list1[1]=125000
+updated_tuple=tuple(list1)
+print("Updated sample tuple:", updated_tuple)
+
+

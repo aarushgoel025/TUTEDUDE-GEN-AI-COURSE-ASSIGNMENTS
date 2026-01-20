@@ -1,0 +1,15 @@
+products=["S25 Ultra", "Boat Headphones", "IPhone 17", "LG Smart TV", "HP Pavilion", "Logitech S500 mouse"]
+price_dict={"S25 Ultra":120000,"Boat Headphones": 1800, "IPhone 17": 80000, "LG Smart TV": 25000,"HP Pavilion": 50000,"Logitech S500 mouse": 800 }
+#1. Adding new element to dictionary
+price_dict["Dyson Airwrap"]= 45000
+print("Dictionary with new element is:",price_dict)
+#2.1 Updating price of an element
+price_dict["Boat Headphones"]=1700
+print("Updated dictionary is:", price_dict)
+#2.2 Removing an element
+price_dict.pop("IPhone 17","Not Found")
+print("Dictionary with removed item is:",price_dict)
+#3. Taking average of prices of all the items
+sum=sum(price_dict.values())
+avg=sum/len(price_dict)
+print("The average of values is:", avg)

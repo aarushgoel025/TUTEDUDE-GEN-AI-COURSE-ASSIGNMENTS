@@ -1,0 +1,28 @@
+order = [1200, 2500, 800, 1750, 3000]
+count = 0
+total_tax = 0
+for order_amt in order:
+    if order_amt >= 2000:
+        discount = 0.15 * order_amt
+        final_amt = order_amt - discount
+    elif order_amt >= 1500 and order_amt < 2000:
+        discount = 0.10 * order_amt
+        final_amt = order_amt - discount
+    elif order_amt >= 1000 and order_amt < 1500:
+        discount = 0.07 * order_amt
+        final_amt = order_amt - discount
+    else:
+        discount = 0
+        final_amt = order_amt
+    
+    tax = 0.05 * final_amt
+    total_bill = final_amt + tax
+    
+    print(f"Order: {order_amt}, Discount: {discount}, Final: {final_amt}, Tax: {tax}, Total: {total_bill}")
+    
+    if discount > 0:
+        count += 1
+    total_tax += tax
+
+print(f"Total orders with discount: {count}")
+print(f"Total tax collected: {total_tax}")

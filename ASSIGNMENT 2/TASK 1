@@ -1,0 +1,19 @@
+order_amt=int(input("Enter the order amount: "))
+if type(order_amt)!=int:
+    print("Invalid input. Please enter a numeric value.")
+else:
+    if order_amt>=2000:
+        discount=0.15*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    elif order_amt>=1500 and order_amt<2000:
+        discount=0.10*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    elif order_amt>=1000 and order_amt<1500:
+        discount=0.07*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    else:
+        print("No discount applicable. The final amount is:",order_amt)
+

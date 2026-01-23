@@ -1,0 +1,22 @@
+order=[1200, 2500, 800,1750, 3000]
+count=0
+for order_amt in order:
+    if order_amt>=2000:
+        discount=0.15*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    elif order_amt>=1500 and order_amt<2000:
+        discount=0.10*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    elif order_amt>=1000 and order_amt<1500:
+        discount=0.07*order_amt
+        final_amt=order_amt-discount
+        print("The final amount after discount is:",final_amt)
+    else:
+        print("No discount applicable. The final amount is:",order_amt)
+    print(order_amt, "-->", discount, "-->", final_amt)
+#EXTRA
+    if (discount>0):
+        count+=1
+print("Total orders with discount applied:", count)
